@@ -1,0 +1,28 @@
+<!--pages/detail/index.wxml-->
+<view class="container">
+  <block wx:if="{{ isLoading }}">
+    <view class="tip_text">
+      加载中...
+    </view>
+  </block>
+  <view class="main">
+    <block wx:if="{{ errorId }}">
+      <view class="title font_title_1">没有查到信息:</view>
+
+      <view class="sub_title ">你可能输错了Id: <text class="name red">{{ id }}</text>， 请检查一下吧</view>
+    </block>
+
+    <block wx:if="{{ studentMsg }}">
+      <view class="title font_title_1">信息查询</view>
+
+      <view>Hi <text class="name">{{studentMsg['姓名']}}</text> 小朋友, 下面是你的信息：</view>
+      <view class="ability_container">
+        <view>姓名：{{ studentMsg['姓名'] }}</view>
+        <view>年龄：{{ studentMsg['年龄'] }}岁</view>
+        <view>身高：{{ studentMsg['身高'] }}cm</view>
+      </view>
+      <view class="score">成绩还没出来哦，请过几天再来查吧~</view>
+    </block>
+  </view>
+
+</view>

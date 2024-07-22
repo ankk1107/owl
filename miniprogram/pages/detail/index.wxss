@@ -34,6 +34,7 @@ page {
   font-size: 28rpx;
   color: rgba(0, 0, 0, 0.6);
   line-height: 52rpx;
+  margin-top: 50rpx;
 }
 
 /* 一级标题字体 */
@@ -249,4 +250,17 @@ page {
   text-align: center;
   color: rgba(0, 0, 0, 0.5);
   font-size: 28rpx;
+}
+
+.name{
+  font-weight: 700;
+}
+
+.score {
+  margin-top: 60rpx;
+  color: grey;
+}
+
+.red {
+  color: red;
 }

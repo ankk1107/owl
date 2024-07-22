@@ -2,8 +2,10 @@
  * 快速开始教程知识点
  */
 const QuickStartPoints = [
-  { id: '1', title: '无需搭建服务器，快速构建小程序' },
-  { id: '2', title: '免登录、免鉴权调用微信开放服务' },
+  { id: '1', title: '你的身高体重' },
+  { id: '2', title: '你的成绩' },
+  { id: '3', title: '你的兴趣爱好' },
+  { id: '4', title: '你的规划（要做的事）' },
 ];
 
 function highlightText(content) {

@@ -1,10 +1,17 @@
-const { envList } = require("../../envList");
-const { QuickStartPoints, QuickStartSteps } = require("./constants");
+const {
+  envList
+} = require("../../envList");
+const {
+  QuickStartPoints,
+  QuickStartSteps
+} = require("./constants");
 
 Page({
   data: {
     knowledgePoints: QuickStartPoints,
     steps: QuickStartSteps,
+    sNumber: '',
+
   },
 
   copyCode(e) {
@@ -33,4 +40,24 @@ Page({
       url: '/pages/goods-list/index',
     })
   },
+
+  bindInput(e) {
+    this.setData({
+      sNumber: e.detail.value
+    });
+  },
+
+  getMsg() {
+    if (this.data.sNumber && Number(this.data.sNumber) !== NaN) {
+      wx.navigateTo({
+        url: `/pages/detail/index?id=${this.data.sNumber}`,
+      })
+    } else {
+      wx.showToast({
+        icon:  'error',
+        title: '请输入你的ID',
+      })
+    }
+
+  }
 });
